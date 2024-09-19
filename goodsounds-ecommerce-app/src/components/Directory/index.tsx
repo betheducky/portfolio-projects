@@ -1,6 +1,7 @@
 import React from "react";
 import ShopLive from "./../../assets/shop-live.jpg";
 import ShopStudio from "./../../assets/shop-studio.jpg";
+import "./styles.scss";
 
 interface Props {
   prop2: string;
@@ -9,22 +10,28 @@ interface Props {
 const Directory = ({ prop2 }: Props) => {
   return (
     <>
-      <div>{prop2}</div>
-      <div>
-        <img
-          style={{
-            backgroundImage: `url(${ShopLive})`,
-          }}
-          alt="Shop Live Gear Image"
-        />
+      <div className="directory">
+        <div className="wrap">
+          <div
+            style={{
+              backgroundImage: `url(${ShopLive})`,
+            }}
+            className="item"
+          >
+            <a href="">Shop Live</a>
+          </div>
+        </div>
+        <div className="wrap">
+          <div
+            style={{
+              backgroundImage: `url(${ShopStudio})`,
+            }}
+            className="item"
+          >
+            <a href="">Shop Studio</a>
+          </div>
+        </div>
       </div>
-      <div>
-      <img
-          style={{
-            backgroundImage: `url(${ShopStudio})`,
-          }}
-          alt="Shop Studio Gear Image"
-        />      </div>
     </>
   );
 };
