@@ -2,6 +2,7 @@ import React from "react";
 import "./default.scss";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
+import Registration from "./pages/Registration";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
             <Header thisProp={true} />
       <div className="main">
         <HomePage prop1="Look@GoodSounds" />
+        <Registration />
       </div>
     </>
   );
