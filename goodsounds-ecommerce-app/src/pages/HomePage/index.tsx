@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <>
       <section className="home-page">
-        <Directory prop2={"LOOK!prop2"} />
+        <Directory />
       </section>
     </>
   );

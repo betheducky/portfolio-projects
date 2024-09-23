@@ -3,11 +3,7 @@ import ShopLive from "./../../assets/shop-live.jpg";
 import ShopStudio from "./../../assets/shop-studio.jpg";
 import "./styles.scss";
 
-interface Props {
-  prop2: string;
-}
-
-const Directory = ({ prop2 }: Props) => {
+const Directory = () => {
   return (
     <>
       <div className="directory">
