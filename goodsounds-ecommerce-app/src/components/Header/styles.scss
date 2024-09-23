@@ -1,0 +1,49 @@
+.header {
+  height: 7.5rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wrap {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  .logo {
+    position: absolute;
+    left: 50px;
+    width: 200px;
+    -webkit-transform: translateY(-32%);
+    -moz-transform: translateY(-32%);
+    transform: translateY(-32%);
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.call-to-action {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  -webkit-transform: translateY(32%);
+  -moz-transform: translateY(32%);
+  transform: translateY(32%);
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+
+    a {
+        font-size: 1.8rem;
+        line-height: 1;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+  }
+}
