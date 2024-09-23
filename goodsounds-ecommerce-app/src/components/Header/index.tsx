@@ -3,11 +3,8 @@ import './styles.scss';
 import Logo from './../../assets/goodsounds.png'
 
 // My atttempt to apply what I knew about components, props, and interfaces in ts...
-interface Props {
-    thisProp: boolean;
-}
 
-const Header = ({}: Props) => {
+const Header = () => {
     return (
         <header className='header'>
             <div className="wrap">

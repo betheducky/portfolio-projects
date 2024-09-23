@@ -2,11 +2,8 @@ import React from "react";
 import "./styles.scss";
 import Directory from "../../components/Directory";
 
-interface Props {
-  prop1: string;
-}
 
-const HomePage = ({ prop1 }: Props) => {
+const HomePage = () => {
   return (
     <>
       <section className="home-page">
