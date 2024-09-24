@@ -37,6 +37,12 @@
 
   li {
     list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     a {
         font-size: 1.8rem;
