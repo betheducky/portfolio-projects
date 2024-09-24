@@ -1,6 +1,9 @@
 import React from "react";
 import "./styles.scss";
 import Button from "../forms/Button";
+import { signInWithGoogle } from "../../firebase/utils";
+
+
 
 const SignIn = () => {
   return (
@@ -9,10 +12,10 @@ const SignIn = () => {
         <h2>Log In</h2>
 
         <div className="formwrap">
-          <form action="">
+          <form>
             <div className="social-sign-in">
               <div className="row">
-                <Button>
+                <Button onClick={signInWithGoogle}>
                   Sign-in with Google
                 </Button>
               </div>
