@@ -6,6 +6,7 @@ import { signInWithGoogle } from "../../firebase/utils";
 
 
 const SignIn = () => {
+
   return (
     <div className="sign-in">
       <div className="wrap">
@@ -15,7 +16,7 @@ const SignIn = () => {
           <form>
             <div className="social-sign-in">
               <div className="row">
-                <Button onClick={signInWithGoogle}>
+                <Button onClick={signInWithGoogle} label={"Sign in with Google"}>
                   Sign-in with Google
                 </Button>
               </div>

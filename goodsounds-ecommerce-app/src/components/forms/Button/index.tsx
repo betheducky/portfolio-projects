@@ -1,9 +1,14 @@
 import React, { PropsWithChildren } from "react";
 import './styles.scss';
 
-const Button = ({children, ...otherProps}: PropsWithChildren) => {
+interface ButtonFunc extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    onClick: () => void;
+  
+  }
+
+const Button:React.FC<PropsWithChildren<ButtonFunc>> = ({onClick, children, ...otherProps}: PropsWithChildren) => {
     return (
-        <button className="btn" {...otherProps} >
+        <button className="btn" onClick={onClick} {...otherProps} >
             {children}
         </button>
     )
