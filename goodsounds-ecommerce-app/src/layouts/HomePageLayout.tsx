@@ -2,7 +2,11 @@ import React, { PropsWithChildren } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const HomePageLayout = ({children}: PropsWithChildren) => {
+interface HomePageLayoutProps {
+    currentUser: object | null;
+}
+
+const HomePageLayout: React.FC<PropsWithChildren<HomePageLayoutProps>> = ({children, currentUser}) => {
     return (
         <div>
             <Header />

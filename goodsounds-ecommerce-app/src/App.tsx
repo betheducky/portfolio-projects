@@ -20,7 +20,11 @@ interface AppProps {
   onClick: () => void;
 }
 
-class App extends Component {
+interface AppState {
+  currentUser: object | null;
+}
+
+class App extends Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
     this.state = initialState
@@ -45,6 +49,9 @@ class App extends Component {
   }
 
   render() {
+
+    const { currentUser } = this.state;
+
     return (
       <>
         <div className="app">
@@ -52,18 +59,18 @@ class App extends Component {
             <Route
               path="/"
               element={
-                <HomePageLayout>
+                <HomePageLayout currentUser={currentUser}>
                   <HomePage />
                 </HomePageLayout>
               }
             />
             <Route path="/registration" element={
-                <MainLayout>
+                <MainLayout currentUser={currentUser}>
                   <Registration />
                 </MainLayout>
               } />
               <Route path="/login" element={
-                <MainLayout>
+                <MainLayout currentUser={currentUser}>
                   <Login />
                 </MainLayout>
               } />
