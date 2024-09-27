@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import "./default.scss";
 import HomePage from "./pages/HomePage";
 import Registration from "./pages/Registration";
@@ -13,8 +13,8 @@ import { Unsubscribe } from "firebase/auth";
 
 // User State Initialization
 const initialState = {
-  currentUser: null
-}
+  currentUser: null,
+};
 
 interface AppProps {
   onClick: () => void;
@@ -27,19 +27,14 @@ interface AppState {
 class App extends Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
-    this.state = initialState
+    this.state = initialState;
   }
 
   authListener: Unsubscribe | null = null;
- 
+
   componentDidMount(): void {
-    this.authListener = auth.onAuthStateChanged(userAuth => {
-      
-      if (userAuth) {
-        this.setState({ currentUser: userAuth });
-      } else {
-        this.setState({ currentUser: null });
-      }
+    this.authListener = auth.onAuthStateChanged((userAuth) => {
+     
     });
   }
   componentWillUnmount(): void {
@@ -49,7 +44,6 @@ class App extends Component<AppProps, AppState> {
   }
 
   render() {
-
     const { currentUser } = this.state;
 
     return (
@@ -64,21 +58,31 @@ class App extends Component<AppProps, AppState> {
                 </HomePageLayout>
               }
             />
-            <Route path="/registration" element={
+            <Route
+              path="/registration"
+              element={
                 <MainLayout currentUser={currentUser}>
                   <Registration />
                 </MainLayout>
-              } />
-              <Route path="/login" element={
-                <MainLayout currentUser={currentUser}>
-                  <Login />
-                </MainLayout>
-              } />
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                currentUser ? (
+                  <Navigate to="/" />
+                ) : (
+                  <MainLayout currentUser={currentUser}>
+                    <Login />
+                  </MainLayout>
+                )
+              }
+            />
           </Routes>
         </div>
       </>
     );
   }
-  }
+}
 
 export default App;
