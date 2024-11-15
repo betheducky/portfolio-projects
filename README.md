@@ -3,5 +3,6 @@ Here are the recent projects I've been working on. Each project link below takes
 
 ## projects
 
-[To-Journal App] - https://github.com/betheducky/to-journal-app
-[GoodSounds ProAudio Rental] - https://github.com/betheducky/goodsounds-ecomm-app
+- [To-Journal App] (https://github.com/betheducky/to-journal-app)
+  
+- [GoodSounds ProAudio Rental] (https://github.com/betheducky/goodsounds-ecomm-app)
