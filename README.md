@@ -3,7 +3,7 @@ Here are the recent projects I've been working on. Each project link below takes
 
 ## projects
 
-- [ReadMore Books Library] ()
+- [ReadMore Books Library] (https://github.com/betheducky/read-more-books-library-frontend)
 
 - [To-Journal App] (https://github.com/betheducky/to-journal-app)
 
