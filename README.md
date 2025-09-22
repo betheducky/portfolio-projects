@@ -5,6 +5,6 @@ Here are the recent projects I've been working on. Each project link below takes
 
 - [ReadMore Books Library] (https://github.com/betheducky/read-more-books-library-frontend)
 
-- [To-Journal App] (https://github.com/betheducky/to-journal-app)
+- [To-Journal App] IN PROGRESS (https://github.com/betheducky/to-journal-app)
 
 - [Spend-Less Finance Tracker] (https://github.com/betheducky/expense-tracker)
