@@ -7,4 +7,4 @@ Here are the recent projects I've been working on. Each project link below takes
 
 - [To-Journal App] IN PROGRESS (https://github.com/betheducky/to-journal-app)
 
-- [Spend-Less Finance Tracker] (https://github.com/betheducky/expense-tracker)
+- [Spend-Less Finance Tracker] IN PROGRESS (https://github.com/betheducky/expense-tracker)
